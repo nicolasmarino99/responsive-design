@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:400:700&display=swap");
-#top-menu, #funding-rounds, #latest-deals, footer {
+#top-menu, #funding-rounds, footer {
   border: 2px dashed rgba(146, 0, 165, 0.5);
   background-color: rgba(146, 0, 165, 0.15);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
@@ -57,6 +57,11 @@ main {
 main section {
   max-width: 1200px;
   margin: auto;
+}
+@media screen and (max-width: 768px) {
+  main section {
+    width: 100%;
+  }
 }
 
 #top-menu {
@@ -196,6 +201,19 @@ main section {
 @media screen and (max-width: 768px) {
   #latest-news {
     grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+  #latest-news article {
+    width: 100%;
+    margin: 5px;
+  }
+  #latest-news article img {
+    float: left;
+    width: 75px;
+    heigth: 75px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-right: 10px;
   }
 }
 
@@ -337,6 +355,22 @@ main section {
   }
 }
 
+.see-all-deals {
+  color: #d63a00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.see-all-deals p {
+  margin-right: .5em;
+}
+
 #latest-deals {
   grid-area: latest-deals;
   display: grid;
@@ -357,8 +391,13 @@ main section {
 #latest-deals article p {
   font-family: sans-serif;
   font-size: .9em;
-  color: grey;
+  color: gray;
   margin: 3px 0;
+}
+#latest-deals article p .old-price {
+  color: darkgray;
+  text-decoration: line-through;
+  margin-right: .5em;
 }
 @media screen and (max-width: 1024px) {
   #latest-deals {

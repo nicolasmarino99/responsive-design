@@ -38,7 +38,7 @@ h1.tnw-section {
 /*nav*/
 #whole-nav {
 
-  
+
   display: grid;
   grid-template-areas:
     "top-nav"
@@ -58,13 +58,13 @@ h1.tnw-section {
 
 
 
-  
+
 
   @media screen and (max-width: 1024px) {
 
   }
   @media screen and(max-width:768px) {
-  
+
   }
 }
 
@@ -84,6 +84,12 @@ main {
   section {
     max-width: 1200px;
     margin: auto;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+//      border: thin solid red;
+    }
+
   }
 }
 
@@ -248,6 +254,19 @@ main {
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    grid-gap: 0px;
+      article {
+        width: 100%;
+        margin: 5px;
+
+        img {
+          float: left;
+          width: 75px;
+          heigth: 75px;
+          object-fit: cover;
+          margin-right: 10px;
+        }
+      }
   }
 
 }
@@ -399,8 +418,19 @@ main {
 
 }
 
+.see-all-deals {
+  color: $site-orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  p {
+    margin-right: .5em;
+  }
+}
+
 #latest-deals {
-  @extend %mark;
+//  @extend %mark;
   grid-area: latest-deals;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -420,9 +450,17 @@ main {
     p {
       font-family: sans-serif;
       font-size: .9em;
-      color: grey;
+      color: gray;
       margin: 3px 0;
+
+      .old-price {
+        color: darkgray;
+        text-decoration: line-through;
+        margin-right: .5em;
+      }
+
     }
+
   }
 
   @media screen and (max-width: 1024px) {
@@ -440,7 +478,7 @@ footer {
   @extend %mark;
   grid-area: footer;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "top-footer"
     "bottom-footer";
   grid-template-columns: 1fr;
