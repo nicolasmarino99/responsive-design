@@ -12,6 +12,7 @@ $site-orange: #d63a00;
 
 body {
   font-family: sans-serif;
+  margin: 0;
 }
 
 article, div {
@@ -34,7 +35,41 @@ h1.tnw-section {
   grid-template-columns: auto;
   grid-template-rows: repeat(3, auto);
 }
+/*nav*/
+#whole-nav {
 
+  
+  display: grid;
+  grid-template-areas:
+    "top-nav"
+    "bottom-nav";
+  grid-template-columns: 1fr;
+  grid-template-rows: 32px 48px;
+
+    #top-nav {
+      grid-area: top-nav;
+      background-color: rgb(19, 19, 19);
+      color: gray;
+    }
+    #bottom-nav {
+      grid-area: bottom-nav;
+      color: gray;
+    }
+
+
+
+  
+
+  @media screen and (max-width: 1024px) {
+
+  }
+  @media screen and(max-width:768px) {
+  
+  }
+}
+
+/*nav ending*/
+/*main*/
 main {
   display: grid;
   grid-template-areas:
@@ -399,8 +434,29 @@ main {
   }
 
 }
-
+/*ending main*/
+/*Footer*/
 footer {
   @extend %mark;
   grid-area: footer;
+  display: grid;
+  grid-template-areas: 
+    "top-footer"
+    "bottom-footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 161px 97px;
+    #top-footer {
+      grid-area: top-footer;
+      background-color: #131313;
+      color: #555555;
+
+    }
+    #bottom-footer {
+      grid-area: bottom-footer;
+      background-color: #000000;
+      color: #555555;
+    }
 }
+
+
+/*ending footer*/

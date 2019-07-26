@@ -8,6 +8,7 @@
 
 body {
   font-family: sans-serif;
+  margin: 0;
 }
 
 article, div {
@@ -28,6 +29,25 @@ h1.tnw-section {
   grid-template-rows: repeat(3, auto);
 }
 
+/*nav*/
+#whole-nav {
+  display: grid;
+  grid-template-areas: "top-nav" "bottom-nav";
+  grid-template-columns: 1fr;
+  grid-template-rows: 32px 48px;
+}
+#whole-nav #top-nav {
+  grid-area: top-nav;
+  background-color: #131313;
+  color: gray;
+}
+#whole-nav #bottom-nav {
+  grid-area: bottom-nav;
+  color: gray;
+}
+
+/*nav ending*/
+/*main*/
 main {
   display: grid;
   grid-template-areas: "banners" "latest-news" "funding-rounds" "articles" "latest-deals";
@@ -351,6 +371,24 @@ main section {
   }
 }
 
+/*ending main*/
+/*Footer*/
 footer {
   grid-area: footer;
+  display: grid;
+  grid-template-areas: "top-footer" "bottom-footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 161px 97px;
 }
+footer #top-footer {
+  grid-area: top-footer;
+  background-color: #131313;
+  color: #555555;
+}
+footer #bottom-footer {
+  grid-area: bottom-footer;
+  background-color: #000000;
+  color: #555555;
+}
+
+/*ending footer*/
