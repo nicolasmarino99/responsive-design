@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:400:700&display=swap");
-#top-menu, #funding-rounds, #articles, #latest-deals, footer {
+#top-menu, #funding-rounds, #latest-deals, footer {
   border: 2px dashed rgba(146, 0, 165, 0.5);
   background-color: rgba(146, 0, 165, 0.15);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
@@ -186,6 +186,22 @@ main section {
   grid-template-rows: 1fr;
   grid-gap: 10px;
 }
+#funding-rounds article {
+  margin: 10px;
+}
+#funding-rounds article img {
+  width: 100%;
+}
+#funding-rounds article h1 {
+  font-size: 1em;
+  margin: 7px 0 3px 0;
+}
+#funding-rounds article p {
+  font-family: sans-serif;
+  font-size: .9em;
+  color: grey;
+  margin: 3px 0;
+}
 @media screen and (max-width: 1024px) {
   #funding-rounds {
     grid-template-columns: repeat(3, 1fr);
@@ -202,10 +218,137 @@ main section {
 
 #articles {
   grid-area: articles;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+#articles article {
+  margin: 10px;
+}
+#articles article .article-head {
+  background-image: url(../img/image-05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 5px 10px;
+  width: 95%;
+  height: 250px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  margin-bottom: auto;
+  overflow: hidden;
+}
+#articles article .article-head h2 {
+  font-family: monospace;
+  text-transform: capitalize;
+  font-size: 1em;
+  margin-top: auto;
+}
+#articles article .article-head p {
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+}
+#articles article .article-head .article-info {
+  font-family: sans-serif;
+  font-size: .7em;
+  color: lightgray;
+}
+#articles article .article-latest {
+  font-size: 16px;
+}
+#articles article .article-latest h2 {
+  color: #d63a00;
+  margin: 2px 0;
+  font-size: .8em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+#articles article .article-latest p {
+  color: #d63a00;
+  font-size: 1em;
+  font-weight: bold;
+}
+#articles article .article-latest img {
+  float: right;
+  width: 25%;
+  margin-left: 1em;
+}
+#articles article img {
+  width: 100%;
+}
+#articles article h1 {
+  color: #d63a00;
+  font-family: 'Heebo', sans-serif;
+  font-size: 30px;
+  margin: 1em 0px .2em 0px;
+}
+#articles article p {
+  font-family: sans-serif;
+  font-size: .9em;
+  color: grey;
+  margin: 3px 0;
+}
+#articles article li {
+  font-family: sans-serif;
+  font-size: 12px;
+  margin: .5em 0;
+  padding: .5em 0;
+  border-bottom: thin solid lightgrey;
+}
+@media screen and (max-width: 1024px) {
+  #articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  #articles {
+    grid-template-columns: 1fr;
+  }
 }
 
 #latest-deals {
   grid-area: latest-deals;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+#latest-deals article {
+  margin: 10px;
+}
+#latest-deals article img {
+  width: 100%;
+}
+#latest-deals article h1 {
+  font-size: 1em;
+  margin: 7px 0 3px 0;
+}
+#latest-deals article p {
+  font-family: sans-serif;
+  font-size: .9em;
+  color: grey;
+  margin: 3px 0;
+}
+@media screen and (max-width: 1024px) {
+  #latest-deals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  #latest-deals {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
