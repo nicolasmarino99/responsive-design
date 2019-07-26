@@ -14,6 +14,9 @@ body {
   font-family: sans-serif;
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
 
 article, div {
   min-height: 10px;
@@ -42,7 +45,8 @@ h1.tnw-section {
   display: grid;
   grid-template-areas:
     "top-nav"
-    "bottom-nav";
+    "bottom-nav"
+    "icon";
   grid-template-columns: 1fr;
   grid-template-rows: 32px 48px;
 
@@ -50,21 +54,131 @@ h1.tnw-section {
       grid-area: top-nav;
       background-color: rgb(19, 19, 19);
       color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      a {
+        color: gray;
+        font-weight: bold;
+      }
     }
     #bottom-nav {
       grid-area: bottom-nav;
       color: gray;
+      align-items: center;
+      justify-content: space-around;
+      display: flex;
+      a {
+        color: gray;
+        font-weight: bold;
+      }
+    }
+    #icon {
+      grid-area: icon;
+      width: 0px;
+      height:0px;
+      margin: 0;
+      
     }
 
 
+    
+  
 
+  
+  
+}
 
+@media screen and (max-width: 1024px) {
+  #whole-nav {
+    display: grid;
+    grid-template-areas:
+      "icon top-nav"
+      "icon bottom-nav";
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 32px 48px;
 
-  @media screen and (max-width: 1024px) {
+    #top-nav {
+      grid-area: top-nav;
+      background-color: rgb(19, 19, 19);
+      color: gray;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      
+        a {
+          color: gray;
+          font-weight: bold;
+        }
+    }
+    #bottom-nav {
+      grid-area: bottom-nav;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      a {
+        color: gray;
+        font-weight: bold;
+
+      }
+      i {
+        
+        
+        
+      }
+    }
+
+    #icon {
+      grid-area: icon;
+      
+      width: 90px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      background: rgba(235,30,235,1);
+      background: -moz-linear-gradient(-45deg, rgba(235,30,235,1) 0%, rgba(235,30,235,1) 6%, rgba(222,209,31,1) 94%, rgba(222,209,31,1) 100%);
+      background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(235,30,235,1)), color-stop(6%, rgba(235,30,235,1)), color-stop(94%, rgba(222,209,31,1)), color-stop(100%, rgba(222,209,31,1)));
+      background: -webkit-linear-gradient(-45deg, rgba(235,30,235,1) 0%, rgba(235,30,235,1) 6%, rgba(222,209,31,1) 94%, rgba(222,209,31,1) 100%);
+      background: -o-linear-gradient(-45deg, rgba(235,30,235,1) 0%, rgba(235,30,235,1) 6%, rgba(222,209,31,1) 94%, rgba(222,209,31,1) 100%);
+      background: -ms-linear-gradient(-45deg, rgba(235,30,235,1) 0%, rgba(235,30,235,1) 6%, rgba(222,209,31,1) 94%, rgba(222,209,31,1) 100%);
+      background: linear-gradient(135deg, rgba(235,30,235,1) 0%, rgba(235,30,235,1) 6%, rgba(222,209,31,1) 94%, rgba(222,209,31,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb1eeb', endColorstr='#ded11f', GradientType=1 );
+       img {
+        width: 50px;
+        height: 40px;
+        margin-left: 1.3em;
+       }
+     
+    }
 
   }
-  @media screen and(max-width:768px) {
+}
+@media screen and(max-width:768px) {
+  #whole-nav {
+    display: grid;
+    grid-template-areas:
+      "icon bottom-nav";
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 48px;
+    #icon {
+      margin-left: 10px;
+      
+      grid-area: icon;
+      display: flex;
+      justify-content: flex-end;
+      .button {
+        padding: 2em;
+      }
+     }
 
+     #bottom-nav {
+      grid-area: bottom-nav;
+      display: flex;
+      justify-content: flex-end;
+     }
+     a {
+       display: none;
+     }
   }
 }
 
@@ -94,7 +208,7 @@ main {
 }
 
 #top-menu {
-  @extend %mark;
+  
   grid-area: top-menu;
 }
 

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:400:700&display=swap");
-#top-menu, #funding-rounds, footer {
+#funding-rounds, footer {
   border: 2px dashed rgba(146, 0, 165, 0.5);
   background-color: rgba(146, 0, 165, 0.15);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
@@ -9,6 +9,10 @@
 body {
   font-family: sans-serif;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 article, div {
@@ -32,7 +36,7 @@ h1.tnw-section {
 /*nav*/
 #whole-nav {
   display: grid;
-  grid-template-areas: "top-nav" "bottom-nav";
+  grid-template-areas: "top-nav" "bottom-nav" "icon";
   grid-template-columns: 1fr;
   grid-template-rows: 32px 48px;
 }
@@ -40,12 +44,135 @@ h1.tnw-section {
   grid-area: top-nav;
   background-color: #131313;
   color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#whole-nav #top-nav a {
+  color: gray;
+  font-weight: bold;
 }
 #whole-nav #bottom-nav {
   grid-area: bottom-nav;
   color: gray;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#whole-nav #bottom-nav a {
+  color: gray;
+  font-weight: bold;
+}
+#whole-nav #icon {
+  grid-area: icon;
+  width: 0px;
+  height: 0px;
+  margin: 0;
 }
 
+@media screen and (max-width: 1024px) {
+  #whole-nav {
+    display: grid;
+    grid-template-areas: "icon top-nav" "icon bottom-nav";
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 32px 48px;
+  }
+  #whole-nav #top-nav {
+    grid-area: top-nav;
+    background-color: #131313;
+    color: gray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #whole-nav #top-nav a {
+    color: gray;
+    font-weight: bold;
+  }
+  #whole-nav #bottom-nav {
+    grid-area: bottom-nav;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #whole-nav #bottom-nav a {
+    color: gray;
+    font-weight: bold;
+  }
+  #whole-nav #icon {
+    grid-area: icon;
+    width: 90px;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #eb1eeb;
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, #eb1eeb), color-stop(6%, #eb1eeb), color-stop(94%, #ded11f), color-stop(100%, #ded11f));
+    background: linear-gradient(135deg, #eb1eeb 0%, #eb1eeb 6%, #ded11f 94%, #ded11f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb1eeb', endColorstr='#ded11f', GradientType=1 );
+  }
+  #whole-nav #icon img {
+    width: 50px;
+    height: 40px;
+    margin-left: 1.3em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #whole-nav {
+    display: grid;
+    grid-template-areas: "icon bottom-nav";
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 48px;
+  }
+  #whole-nav #icon {
+    margin-left: 10px;
+    grid-area: icon;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #whole-nav #icon .button {
+    padding: 2em;
+  }
+  #whole-nav #bottom-nav {
+    grid-area: bottom-nav;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #whole-nav a {
+    display: none;
+  }
+}
 /*nav ending*/
 /*main*/
 main {
