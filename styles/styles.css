@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:400:700&display=swap");
-#funding-rounds, footer {
+footer {
   border: 2px dashed rgba(146, 0, 165, 0.5);
   background-color: rgba(146, 0, 165, 0.15);
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNicgaGVpZ2h0PSc2Jz4KICA8cmVjdCB3aWR0aD0nNicgaGVpZ2h0PSc2JyBmaWxsPScjZWVlZWVlJy8+CiAgPGcgaWQ9J2MnPgogICAgPHJlY3Qgd2lkdGg9JzMnIGhlaWdodD0nMycgZmlsbD0nI2U2ZTZlNicvPgogICAgPHJlY3QgeT0nMScgd2lkdGg9JzMnIGhlaWdodD0nMicgZmlsbD0nI2Q4ZDhkOCcvPgogIDwvZz4KICA8dXNlIHhsaW5rOmhyZWY9JyNjJyB4PSczJyB5PSczJy8+Cjwvc3ZnPg==");
@@ -23,6 +23,7 @@ h1.tnw-section {
   color: #d63a00;
   font-family: 'Heebo', sans-serif;
   font-size: 30px;
+  font-weight: bold;
   margin: 3em 0px .7em 0px;
 }
 
@@ -180,15 +181,12 @@ main {
   grid-template-areas: "banners" "latest-news" "funding-rounds" "articles" "latest-deals";
   grid-template-columns: auto;
   grid-template-rows: repeat(5, auto);
+  padding: 0 20px;
 }
 main section {
+  width: 100%;
   max-width: 1200px;
   margin: auto;
-}
-@media screen and (max-width: 768px) {
-  main section {
-    width: 100%;
-  }
 }
 
 #top-menu {
@@ -344,6 +342,39 @@ main section {
   }
 }
 
+.funding-rounds-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: -18px;
+  margin-bottom: 1.5em;
+  font-size: 14px;
+}
+.funding-rounds-links a {
+  color: #d63a00;
+  margin-right: 1em;
+  padding-right: 1em;
+  border-right: 1px solid #d63a00;
+}
+.funding-rounds-links a:last-child {
+  border: 0px solid transparent;
+}
+@media screen and (max-width: 768px) {
+  .funding-rounds-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .funding-rounds-links a {
+    border: none;
+    padding-bottom: 1em;
+  }
+}
+
 #funding-rounds {
   grid-area: funding-rounds;
   display: grid;
@@ -353,19 +384,65 @@ main section {
 }
 #funding-rounds article {
   margin: 10px;
+  font-size: 16px;
 }
-#funding-rounds article img {
+#funding-rounds article a {
+  color: #3e3e3e;
+  font-size: .8em;
+}
+#funding-rounds article a i {
+  margin: 0px .5em;
+  font-size: 1.3em;
+}
+#funding-rounds article div {
+  padding-left: 1em;
+}
+#funding-rounds article div:last-child {
+  border-top: thin solid #d63a00;
+  padding-top: .5em;
+}
+#funding-rounds article .lfr-head {
+  font-size: 16px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
+}
+#funding-rounds article .lfr-head div {
   width: 100%;
+  position: relative;
+  height: 103px;
+  padding: 0px;
+  background-color: rgba(255, 68, 34, 0.08);
 }
-#funding-rounds article h1 {
+#funding-rounds article .lfr-head div img {
+  width: 60px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#funding-rounds article .lfr-head div h1, #funding-rounds article .lfr-head div h2, #funding-rounds article .lfr-head div h3 {
+  margin: 0;
+  padding-left: 80px;
+}
+#funding-rounds article .lfr-head div h1 {
   font-size: 1em;
-  margin: 7px 0 3px 0;
+  height: 43px;
+  line-height: 43px;
+  background-color: #d63a00;
+  color: white;
+  font-size: 1.3em;
 }
-#funding-rounds article p {
+#funding-rounds article .lfr-head div h2 {
   font-family: sans-serif;
-  font-size: .9em;
+  font-size: 1.1em;
+  color: black;
+  margin-top: 7px;
+}
+#funding-rounds article .lfr-head div h3 {
+  font-family: sans-serif;
+  font-size: .7em;
   color: grey;
-  margin: 3px 0;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 @media screen and (max-width: 1024px) {
   #funding-rounds {
@@ -446,7 +523,8 @@ main section {
 }
 #articles article .article-latest img {
   float: right;
-  width: 25%;
+  width: 96px;
+  height: 96px;
   margin-left: 1em;
 }
 #articles article img {
@@ -534,6 +612,17 @@ main section {
 @media screen and (max-width: 768px) {
   #latest-deals {
     grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+  #latest-deals article {
+    width: 100%;
+    margin: 5px;
+  }
+  #latest-deals article img {
+    float: left;
+    width: 75px;
+    heigth: 75px;
+    margin-right: 10px;
   }
 }
 
