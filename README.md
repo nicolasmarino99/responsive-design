@@ -10,11 +10,11 @@ This project is a clone of the site [thenextweb.com](https://thenextweb.com/) wh
 <img  src="design/layout-width-gt-1200.png" width="342">
 
 ### Layout in a device with a display width between 1200 pixels and 1024 pixels
-<img align="right" src="design/layout-1200-gt-width-ge-1024.svg" width="300" height"1128">
+<img align="right" src="design/layout-1200-gt-width-ge-1024.svg" width="300" height="1128">
 <img src="design/layout-1200-gt-width-ge-1024.png" width="300">
 
 ### Layout in a device with a display width between 1024 pixels and 768 pixels
-<img align="right" src="design/layout-1024-gt-width-ge-768.svg" width="256" heigth="1427">
+<img align="right" src="design/layout-1024-gt-width-ge-768.svg" width="256" height="1427">
 <img src="design/layout-1024-gt-width-ge-768.png" width="256">
 
 ### Layout in a device with a display width below 768 pixels
