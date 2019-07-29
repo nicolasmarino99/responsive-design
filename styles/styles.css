@@ -8,11 +8,12 @@ a {
   text-decoration: none;
 }
 
-article, div {
+article,
+div {
   min-height: 10px;
 }
 
-h1.tnw-section {
+h2.tnw-section {
   color: #d63a00;
   font-family: 'Heebo', sans-serif;
   font-size: 30px;
@@ -126,7 +127,7 @@ h1.tnw-section {
     background: #eb1eeb;
     background: -webkit-gradient(left top, right bottom, color-stop(0%, #eb1eeb), color-stop(6%, #eb1eeb), color-stop(94%, #ded11f), color-stop(100%, #ded11f));
     background: linear-gradient(135deg, #eb1eeb 0%, #eb1eeb 6%, #ded11f 94%, #ded11f 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb1eeb', endColorstr='#ded11f', GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb1eeb', endColorstr='#ded11f', GradientType=1);
   }
   #whole-nav #icon img {
     width: 50px;
@@ -196,7 +197,7 @@ main section {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-#banners article {
+#banners > div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -227,13 +228,13 @@ main section {
   clear: both;
   margin: 24px 24px;
 }
-#banners .big-banner section h1 {
+#banners .big-banner section h2 {
   font-family: 'Heebo', sans-serif;
   font-size: 30px;
   line-height: 1.05em;
   margin: 5px 0px;
 }
-#banners .big-banner section h2 {
+#banners .big-banner section h3 {
   font-size: 16px;
 }
 #banners .banner-top-right {
@@ -247,13 +248,13 @@ main section {
 #banners .small-banner section {
   margin: 24px 24px;
 }
-#banners .small-banner section h1 {
+#banners .small-banner section h2 {
   font-family: 'Heebo', sans-serif;
   font-size: 18px;
   line-height: 1.05em;
   margin: 5px 0px;
 }
-#banners .small-banner section h2 {
+#banners .small-banner section h3 {
   font-size: 12px;
 }
 @media screen and (max-width: 1024px) {
@@ -275,13 +276,13 @@ main section {
     clear: none;
     margin: 24px 24px;
   }
-  #banners .big-banner section h1 {
+  #banners .big-banner section h2 {
     font-family: 'Heebo', sans-serif;
     font-size: 18px;
     line-height: 1.05em;
     margin: 5px 0px;
   }
-  #banners .big-banner section h2 {
+  #banners .big-banner section h3 {
     font-size: 12px;
   }
 }
@@ -299,7 +300,7 @@ main section {
 #latest-news article img {
   width: 100%;
 }
-#latest-news article h1 {
+#latest-news article h2 {
   font-size: 1em;
   margin: 7px 0 3px 0;
 }
@@ -413,11 +414,13 @@ main section {
   top: 10px;
   left: 10px;
 }
-#funding-rounds article .lfr-head div h1, #funding-rounds article .lfr-head div h2, #funding-rounds article .lfr-head div h3 {
+#funding-rounds article .lfr-head div h2,
+#funding-rounds article .lfr-head div h3,
+#funding-rounds article .lfr-head div h4 {
   margin: 0;
   padding-left: 80px;
 }
-#funding-rounds article .lfr-head div h1 {
+#funding-rounds article .lfr-head div h2 {
   font-size: 1em;
   height: 43px;
   line-height: 43px;
@@ -425,13 +428,13 @@ main section {
   color: white;
   font-size: 1.3em;
 }
-#funding-rounds article .lfr-head div h2 {
+#funding-rounds article .lfr-head div h3 {
   font-family: sans-serif;
   font-size: 1.1em;
   color: black;
   margin-top: 7px;
 }
-#funding-rounds article .lfr-head div h3 {
+#funding-rounds article .lfr-head div h4 {
   font-family: sans-serif;
   font-size: .7em;
   color: grey;
@@ -459,6 +462,9 @@ main section {
   grid-template-rows: 1fr;
   grid-gap: 10px;
 }
+#articles > h2 {
+  display: none;
+}
 #articles article {
   margin: 10px;
 }
@@ -483,7 +489,7 @@ main section {
   margin-bottom: auto;
   overflow: hidden;
 }
-#articles article .article-head h2 {
+#articles article .article-head h3 {
   font-family: monospace;
   text-transform: capitalize;
   font-size: 1em;
@@ -503,7 +509,7 @@ main section {
 #articles article .article-latest {
   font-size: 16px;
 }
-#articles article .article-latest h2 {
+#articles article .article-latest h3 {
   color: #d63a00;
   margin: 2px 0;
   font-size: .8em;
@@ -524,7 +530,7 @@ main section {
 #articles article img {
   width: 100%;
 }
-#articles article h1 {
+#articles article h2 {
   color: #d63a00;
   font-family: 'Heebo', sans-serif;
   font-size: 30px;
@@ -583,7 +589,7 @@ main section {
 #latest-deals article img {
   width: 100%;
 }
-#latest-deals article h1 {
+#latest-deals article h2 {
   font-size: 1em;
   margin: 7px 0 3px 0;
 }
