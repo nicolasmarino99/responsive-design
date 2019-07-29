@@ -3,6 +3,7 @@
 
 This project is a clone of the site [thenextweb.com](https://thenextweb.com/) which tries to replicate the responsive behaviour of the original site.
 
+* [Live preview](https://rawcdn.githack.com/oscarnava/responsive-design/8af328b874883d91ea62b901d60849b85d8e53e3/index.html)
 * [Design layout diagram](https://rawcdn.githack.com/oscarnava/responsive-design/4c4771e10dd3a9d57ae69eeee730e1a17044b99b/design/layout.html)
 
 ### Layout in a device with a display width above 1200 pixels
