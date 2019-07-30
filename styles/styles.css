@@ -6,6 +6,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 article,
@@ -34,6 +35,7 @@ h2.tnw-section {
   grid-template-areas: "top-nav" "bottom-nav" "icon";
   grid-template-columns: 1fr;
   grid-template-rows: 32px 48px;
+  z-index: 1000;
 }
 #whole-nav #top-nav {
   grid-area: top-nav;
@@ -48,6 +50,7 @@ h2.tnw-section {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: fixed;
+  z-index: 1000;
   width: 100%;
   height: 32px;
   margin-bottom: 32px;
@@ -68,6 +71,7 @@ h2.tnw-section {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 1000;
   width: 100%;
   height: 48px;
   background: white;
@@ -82,11 +86,11 @@ h2.tnw-section {
   width: 0px;
   height: 0px;
   margin: 0;
+  z-index: 1000;
 }
-#whole-nav #burger {
+#whole-nav .fa-bars {
   display: none;
 }
-
 @media screen and (max-width: 1024px) {
   #whole-nav {
     display: grid;
@@ -136,7 +140,7 @@ h2.tnw-section {
     color: gray;
     font-weight: bold;
   }
-  #whole-nav #bottom-nav #burger {
+  #whole-nav #bottom-nav .fa-bars {
     display: none;
   }
   #whole-nav #icon {
@@ -157,7 +161,7 @@ h2.tnw-section {
   }
   #whole-nav #icon img {
     width: 50px;
-    height: 40px;
+    height: 48px;
     margin-left: 1.3em;
   }
 }
@@ -166,12 +170,13 @@ h2.tnw-section {
     display: grid;
     grid-template-areas: "icon bottom-nav";
     grid-template-columns: 90px 1fr;
-    grid-template-rows: 28px;
+    grid-template-rows: 48px;
+    height: 48px;
   }
   #whole-nav #icon {
     grid-area: icon;
     position: fixed;
-    height: 38px;
+    height: 48px;
   }
   #whole-nav #icon img {
     left: 20px;
@@ -194,9 +199,9 @@ h2.tnw-section {
     position: relative;
     padding: 0 1em;
     margin-top: 13px;
-    border-left: 1px solid #b8b8b8;
+    border-left: 1px solid rgba(184, 184, 184, 0.5);
     height: 38px;
-    margin-top: 20px;
+    padding-top: 20px;
     right: 2em;
     top: -5px;
   }
@@ -204,14 +209,15 @@ h2.tnw-section {
     position: relative;
     top: 9px;
   }
-  #whole-nav #bottom-nav .button i #burger {
-    color: white;
-    border: 2px solid red;
+  #whole-nav #bottom-nav .button .fa-bars {
+    color: red;
+    display: inline;
   }
   #whole-nav a {
     display: none;
   }
 }
+
 /*nav ending*/
 /*main*/
 main {
@@ -367,16 +373,24 @@ main section {
     grid-gap: 0px;
   }
   #latest-news article {
+    display: grid;
     width: 100%;
     margin: 5px;
+    grid-template-columns: 85px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "image header" "image footer";
   }
   #latest-news article img {
-    float: left;
+    grid-area: image;
+    padding-top: 10px;
     width: 75px;
     heigth: 75px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    margin-right: 10px;
+  }
+  #latest-news article h2 {
+    grid-area: header;
+  }
+  #latest-news article p {
+    grid-area: footer;
   }
 }
 
@@ -730,6 +744,18 @@ footer #bottom-footer {
   color: #7a7a7a;
   text-align: center;
   font-size: .7em;
+}
+footer #bottom-footer .tnw-logo {
+  display: inline-block;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NiAxNiI+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTM0IDE2aC02di01LjJjMC0uNy0uMy0xLjMtLjctMS44TDI1IDYuN2MtLjUtLjQtMS4xLS43LTEuOC0uN0gyMnYxMGgtNlYwaDguN2MxLjMgMCAyLjYuNSAzLjUgMS41bDQuMyA0LjNjMSAuOSAxLjUgMi4yIDEuNSAzLjVWMTZ6TTYwIDB2NS4yYzAgLjctLjMgMS4zLS43IDEuOEw1NyA5LjNjLS41LjUtMS4xLjctMS44LjdoLTIuNWMuOC0uOSAxLjMtMi4xIDEuMy0zLjNWMGgtNnY1LjJjMCAuNy0uMyAxLjMtLjcgMS44TDQ1IDkuM2MtLjUuNS0xLjEuNy0xLjguN0g0MlYwaC02djE2aDguN2MxLjMgMCAyLjYtLjUgMy41LTEuNWwyLjgtMi44VjE2aDUuN2MxLjMgMCAyLjYtLjUgMy41LTEuNWw0LjMtNC4zYzEtLjkgMS41LTIuMiAxLjUtMy41VjBoLTZ6TTE0IDBIMHY2aDR2MTBoNlY2aDQiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 30px;
+  height: 16px;
+}
+footer #bottom-footer .stackpath {
+  color: white;
+  font-weight: bold;
 }
 
 /*ending footer*/
