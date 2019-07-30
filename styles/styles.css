@@ -83,6 +83,9 @@ h2.tnw-section {
   height: 0px;
   margin: 0;
 }
+#whole-nav #burger {
+  display: none;
+}
 
 @media screen and (max-width: 1024px) {
   #whole-nav {
@@ -125,7 +128,6 @@ h2.tnw-section {
         justify-content: space-around;
     width: 90%;
     left: 90px;
-    float: left;
     height: 48px;
     background: white;
     margin-top: 32px;
@@ -133,6 +135,9 @@ h2.tnw-section {
   #whole-nav #bottom-nav a {
     color: gray;
     font-weight: bold;
+  }
+  #whole-nav #bottom-nav #burger {
+    display: none;
   }
   #whole-nav #icon {
     grid-area: icon;
@@ -198,6 +203,10 @@ h2.tnw-section {
   #whole-nav #bottom-nav .button i {
     position: relative;
     top: 9px;
+  }
+  #whole-nav #bottom-nav .button i #burger {
+    color: white;
+    border: 2px solid red;
   }
   #whole-nav a {
     display: none;
