@@ -47,6 +47,10 @@ h2.tnw-section {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 32px;
+  margin-bottom: 32px;
 }
 #whole-nav #top-nav a {
   color: gray;
@@ -63,6 +67,11 @@ h2.tnw-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  width: 100%;
+  height: 48px;
+  background: white;
+  margin-top: 32px;
 }
 #whole-nav #bottom-nav a {
   color: gray;
@@ -94,6 +103,11 @@ h2.tnw-section {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    position: fixed;
+    width: 90%;
+    height: 32px;
+    margin-bottom: 32px;
+    left: 90px;
   }
   #whole-nav #top-nav a {
     color: gray;
@@ -109,6 +123,12 @@ h2.tnw-section {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    width: 90%;
+    left: 90px;
+    float: left;
+    height: 48px;
+    background: white;
+    margin-top: 32px;
   }
   #whole-nav #bottom-nav a {
     color: gray;
@@ -128,6 +148,7 @@ h2.tnw-section {
     background: -webkit-gradient(left top, right bottom, color-stop(0%, #eb1eeb), color-stop(6%, #eb1eeb), color-stop(94%, #ded11f), color-stop(100%, #ded11f));
     background: linear-gradient(135deg, #eb1eeb 0%, #eb1eeb 6%, #ded11f 94%, #ded11f 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eb1eeb', endColorstr='#ded11f', GradientType=1);
+    position: fixed;
   }
   #whole-nav #icon img {
     width: 50px;
@@ -144,11 +165,14 @@ h2.tnw-section {
   }
   #whole-nav #icon {
     grid-area: icon;
-    position: relative;
+    position: fixed;
     height: 38px;
   }
   #whole-nav #icon img {
     left: 20px;
+  }
+  #whole-nav #top-nav {
+    display: none;
   }
   #whole-nav #bottom-nav {
     grid-area: bottom-nav;
@@ -158,12 +182,22 @@ h2.tnw-section {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    width: 88%;
+    top: -42px;
   }
   #whole-nav #bottom-nav .button {
+    position: relative;
     padding: 0 1em;
+    margin-top: 13px;
     border-left: 1px solid #b8b8b8;
     height: 38px;
     margin-top: 20px;
+    right: 2em;
+    top: -5px;
+  }
+  #whole-nav #bottom-nav .button i {
+    position: relative;
+    top: 9px;
   }
   #whole-nav a {
     display: none;
